@@ -24,24 +24,39 @@ This document outlines the plan and implementation details for creating a pixel-
 
 ### **2. Features & Interactivity**
 
-*   **Header & Footer:** Consistent across all pages.
+*   **Header & Footer:** Consistent across all pages, implemented as reusable Web Components (`<site-header>` and `<site-footer>`).
 *   **Navigation:** Main navigation includes About, Writing, Experience, and Resume.
 *   **Logo Hover Animation:** The logo text smoothly transitions from the primary green to the darker secondary green on hover.
 *   **About Page:** The initial landing page with biographical information.
 *   **Writing Page:** A section listing all articles, grouped by year.
-*   **Responsive Navigation:** A hamburger menu on smaller screens.
+*   **Experience Page:** A dedicated page showcasing professional experience in a clean, modern layout.
+*   **Responsive Navigation:** A hamburger menu on smaller screens, encapsulated within the `<site-header>` component.
 
 ## Completed Tasks
 
-1.  **Initial Scaffolding & About Page:** Created the main HTML, CSS, and JS files.
-2.  **Mobile Navigation:** Implemented the hamburger menu for smaller screens.
-3.  **"Writing" Section:** Created the `writing.html` page.
-4.  **Navigation Update:** Updated the main navigation to include "Experience" and "Resume".
-5.  **Theming & Animation:** Applied a green color scheme and refined the logo animation.
-6.  **Logo Hover Effect:** Simplified the logo animation to a simple color change on hover.
-7.  **Footer Gradient:** Implemented and refined a complex, multi-layered gradient for the footer.
+1.  **Initial Scaffolding & About Page.**
+2.  **Mobile Navigation.**
+3.  **"Writing" Section.**
+4.  **Navigation Update.**
+5.  **Theming & Animation.**
+6.  **Logo Hover Effect.**
+7.  **Footer Gradient Modernization.**
+8.  **"Experience" Page Creation & Styling.**
+9.  **Navigation Bar Consistency.**
 
-## Current Plan: Modernize Footer Gradient (No Yellow)
+## Current Plan: Refactor Header & Footer into Web Components
 
-1.  **Define `oklch` Color Palette:** Update the CSS variables in `style.css` to use an `oklch` color palette of lime green and sea green.
-2.  **Refine Gradient Composition:** Adjust the `radial-gradient` properties to create a smoother, more atmospheric blend of colors, resulting in a sophisticated, modern aesthetic without any yellow.
+1.  **Create Component Files:** Create `site-header.js` and `site-footer.js` in a new `components` directory.
+2.  **Build `<site-header>` Component:**
+    *   Define a `SiteHeader` class that extends `HTMLElement`.
+    *   Move the header HTML, including the logo and navigation, into the component's shadow DOM.
+    *   Encapsulate the hamburger menu functionality (event listeners and class toggling) within the component.
+    *   Link `style.css` inside the shadow DOM.
+    *   Define the custom element as `site-header`.
+3.  **Build `<site-footer>` Component:**
+    *   Define a `SiteFooter` class.
+    *   Move the footer HTML into its shadow DOM.
+    *   Link `style.css` inside the shadow DOM.
+    *   Define the custom element as `site-footer`.
+4.  **Update `main.js`:** Modify the main script to import and register the new components.
+5.  **Update HTML Pages:** Replace the static `<header>` and `<footer>` elements in `index.html`, `writing.html`, and `experience.html` with the new `<site-header>` and `<site-footer>` custom elements.

@@ -7,26 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/"><span class="logo-zach">Zach</span> <span class="logo-holman">Holman!</span></a>
-        </div>
-        <button class="hamburger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="writing.html">Writing</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+    <site-header></site-header>
 
     <main>
         <section class="writing">
@@ -88,14 +69,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <h2>Zach Holman</h2>
-            <p>I'm on <a href="#">Threads</a>, <a href="#">Bluesky</a>, and unfortunately <a href="#">Twitter</a>.</p>
-            <p>You can also find me on <a href="#">GitHub</a>.</p>
-        </div>
-    </footer>
+    <site-footer></site-footer>
 
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

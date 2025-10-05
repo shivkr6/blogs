@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Zach Holman</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="experience.css">
+</head>
+<body>
+    <site-header></site-header>
+
+    <main>
+        <div class="experience-header">
+            <h1>Experience</h1>
+            <div class="actions">
+                <button class="action-btn add-btn">+</button>
+                <button class="action-btn edit-btn">✎</button>
+            </div>
+        </div>
+
+        <section class="job">
+            <div class="job-header">
+                <div class="logo-placeholder"></div>
+                <div class="job-title">
+                    <h2>LFX Mentee - Podman Container Tools</h2>
+                    <p>The Linux Foundation · Internship</p>
+                    <p>Sep 2025 - Present · 2 mos</p>
+                    <p>Remote</p>
+                </div>
+            </div>
+            <div class="job-details">
+                <p>Sept 2025 - PRESENT (Expected Nov 2025)</p>
+                <a href="https://mentorship.lfx.linuxfoundation.org/project/07efb861-3c5b-4bc2-9986-593656750ffc">https://mentorship.lfx.linuxfoundation.org/project/07efb861-3c5b-4bc2-9986-593656750ffc</a>
+                <ul>
+                    <li>Resolve a critical networking bug in Podman by integrating a new Rust-based Conntrack library into Netavark (Podman's network management tool) to programmatically flush stale connection entries, significantly improving network stability and preventing dropped UDP traffic for running containers.</li>
+                    <li>Architect and implement the first native Rust netlink messages for the Linux kernel's Conntrack (CTNETLINK) subsystem within the netlink-packet-netfilter crate, engineering the full serialization and deserialization logic to enable low-level kernel communication from safe Rust.</li>
+                    <li>Author a comprehensive suite of unit and integration tests using BATS to validate the new conntrack flushing functionality, ensuring the implementation is correct, robust, and free of regressions in the project's CI/CD pipeline.</li>
+                    <li>Collaborate directly with core Podman and Netavark maintainers from Red Hat throughout the project lifecycle, from initial design and code reviews to final integration and documentation for the open-source community.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>
