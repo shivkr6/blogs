@@ -16,6 +16,7 @@ class SiteHeader extends HTMLElement {
           padding: 1rem 2rem;
           background-color: #fff;
           border-bottom: 1px solid #eee;
+          font-family: 'JetBrains Mono', monospace;
         }
 
         .logo a {

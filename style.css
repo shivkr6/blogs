@@ -12,6 +12,10 @@
     --footer-bg-sea: oklch(65% 0.15 165);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+}
+
 site-header,
 site-footer {
   display: block;

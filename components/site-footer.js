@@ -22,6 +22,7 @@ class SiteFooter extends HTMLElement {
         .footer-content h2 {
           font-size: 1.5rem;
           margin-bottom: 1rem;
+          font-family: 'JetBrains Mono', monospace;
         }
 
         .footer-content a {
