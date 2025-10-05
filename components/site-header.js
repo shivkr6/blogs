@@ -18,19 +18,16 @@ class SiteHeader extends HTMLElement {
           text-decoration: none;
           font-size: 1.5rem;
           font-weight: bold;
+          background: linear-gradient(45deg, oklch(70% 0.2 145), oklch(60% 0.18 155));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.4s ease;
         }
 
-        .logo-zach {
-          color: #00ab44;
-          transition: color 0.3s ease;
-        }
-
-        .logo-holman {
-          color: #222;
-        }
-
-        .logo a:hover .logo-zach {
-          color: #007a30;
+        .logo a:hover {
+          background: linear-gradient(45deg, oklch(65% 0.18 150), oklch(55% 0.15 160));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         .main-nav ul {
@@ -87,7 +84,7 @@ class SiteHeader extends HTMLElement {
       </style>
       <header>
         <div class="logo">
-          <a href="/"><span class="logo-zach">Zach</span> <span class="logo-holman">Holman!</span></a>
+          <a href="/">Zach Holman!</a>
         </div>
         <nav class="main-nav">
           <ul>

@@ -6,10 +6,12 @@ class SiteFooter extends HTMLElement {
     shadow.innerHTML = `
       <style>
         footer {
-          padding: 3rem 2rem;
+          padding: 4rem 2rem;
           text-align: center;
-          background-image: radial-gradient(at 20% 90%, oklch(70% 0.2 150 / 0.4), transparent 50%),
-                            radial-gradient(at 80% 20%, oklch(75% 0.22 155 / 0.3), transparent 50%);
+          background-color: oklch(30% 0.1 165);
+          background-image: radial-gradient(at 15% 55%, oklch(80% 0.2 155 / 0.5) 0px, transparent 70%),
+                            radial-gradient(at 80% 30%, oklch(65% 0.15 165 / 0.4) 0px, transparent 65%);
+          color: #fff;
           border-top: 1px solid #eee;
         }
 
@@ -19,14 +21,14 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-content a {
-          color: #00ab44;
+          color: #fff;
           text-decoration: none;
           font-weight: 500;
           transition: color 0.3s ease;
         }
 
         .footer-content a:hover {
-          color: #007a30;
+          color: oklch(90% 0.1 150);
         }
       </style>
       <footer>

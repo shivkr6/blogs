@@ -7,8 +7,8 @@
     --article-link-color: #00ab44;
     --sans-serif-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     /* Modern OKLCH Gradient Palette */
-    --footer-bg-base: oklch(40% 0.1 170);
-    --footer-bg-lime: oklch(85% 0.25 145);
+    --footer-bg-base: oklch(30% 0.1 165);
+    --footer-bg-lime: oklch(80% 0.2 155);
     --footer-bg-sea: oklch(65% 0.15 165);
 }
 
