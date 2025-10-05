@@ -5,6 +5,10 @@ class SiteHeader extends HTMLElement {
 
     shadow.innerHTML = `
       <style>
+        :host {
+          display: block;
+          width: 100%;
+        }
         header {
           display: flex;
           justify-content: space-between;
@@ -18,16 +22,12 @@ class SiteHeader extends HTMLElement {
           text-decoration: none;
           font-size: 1.5rem;
           font-weight: bold;
-          background: linear-gradient(45deg, oklch(70% 0.2 145), oklch(60% 0.18 155));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          transition: all 0.4s ease;
+          color: var(--logo-zach-color, #00ab44);
+          transition: color 0.35s ease;
         }
-
-        .logo a:hover {
-          background: linear-gradient(45deg, oklch(65% 0.18 150), oklch(55% 0.15 160));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+        .logo a:hover,
+        .logo a:focus-visible {
+          color: var(--logo-holman-color, #007a30);
         }
 
         .main-nav ul {

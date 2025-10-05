@@ -5,6 +5,10 @@ class SiteFooter extends HTMLElement {
 
     shadow.innerHTML = `
       <style>
+        :host {
+          display: block;
+          width: 100%;
+        }
         footer {
           padding: 4rem 2rem;
           text-align: center;

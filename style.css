@@ -12,6 +12,12 @@
     --footer-bg-sea: oklch(65% 0.15 165);
 }
 
+site-header,
+site-footer {
+  display: block;
+  width: 100%;
+}
+
 body {
     font-family: var(--sans-serif-font);
     color: var(--primary-text-color);
