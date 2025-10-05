@@ -1,13 +1,15 @@
 :root {
     --primary-text-color: #222;
     --background-color: #fff;
-    --link-color: #007bff;
-    --logo-zach-color: #FF0084;
-    --logo-holman-color: #FF7F24;
-    --article-link-color: #FF7F24;
-    --gradient-start: #ff0084;
-    --gradient-end: #ffc400;
+    --link-color: #00ab44;
+    --logo-zach-color: #00ab44;
+    --logo-holman-color: #007a30;
+    --article-link-color: #00ab44;
     --sans-serif-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* Modern OKLCH Gradient Palette */
+    --footer-bg-base: oklch(40% 0.1 170);
+    --footer-bg-lime: oklch(85% 0.25 145);
+    --footer-bg-sea: oklch(65% 0.15 165);
 }
 
 body {
@@ -33,13 +35,11 @@ header {
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
-}
-
-.logo-zach {
     color: var(--logo-zach-color);
+    transition: color 0.3s ease;
 }
 
-.logo-holman {
+.logo a:hover {
     color: var(--logo-holman-color);
 }
 
@@ -140,21 +140,28 @@ a {
 }
 
 footer {
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-    color: white;
+    background-color: var(--footer-bg-base);
+    background-image: radial-gradient(at 15% 55%, var(--footer-bg-lime) 0px, transparent 70%),
+                      radial-gradient(at 80% 30%, var(--footer-bg-sea) 0px, transparent 65%);
+    color: #fff;
     padding: 4rem;
     text-align: center;
     margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer-content h2 {
     font-size: 2rem;
     margin: 0;
+    font-weight: 700;
 }
 
 .footer-content a {
-    color: white;
+    color: #fff;
+    font-weight: 600;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

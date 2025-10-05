@@ -12,12 +12,10 @@ This document outlines the plan and implementation details for creating a pixel-
 *   **Palette:**
     *   Text: Almost black (`#222`)
     *   Background: White (`#fff`)
-    *   Links: A standard web blue (`#007bff`).
-    *   Article Link Color: Orange (`#FF7F24`)
-    *   Logo Color 1 (Zach): `#FF0084`
-    *   Logo Color 2 (Holman!): `#FF7F24`
-    *   Footer Gradient Start: `#ff0084`
-    *   Footer Gradient End: `#ffc400`
+    *   Primary Accent: Green (`#00ab44`)
+    *   Secondary Accent: Dark Green (`#007a30`)
+    *   Links: The primary accent color (`#00ab44`).
+    *   Footer Background: A smooth, atmospheric mesh gradient using the modern `oklch` color space. The palette includes vibrant yet soft shades of lime green and sea green for a fresh, contemporary feel.
 *   **Typography:**
     *   A clean, modern sans-serif font (`-apple-system`, `BlinkMacSystemFont`, etc.).
 *   **Layout:**
@@ -28,18 +26,22 @@ This document outlines the plan and implementation details for creating a pixel-
 
 *   **Header & Footer:** Consistent across all pages.
 *   **Navigation:** Main navigation includes About, Writing, Experience, and Resume.
+*   **Logo Hover Animation:** The logo text smoothly transitions from the primary green to the darker secondary green on hover.
 *   **About Page:** The initial landing page with biographical information.
 *   **Writing Page:** A section listing all articles, grouped by year.
 *   **Responsive Navigation:** A hamburger menu on smaller screens.
 
 ## Completed Tasks
 
-1.  **Initial Scaffolding & About Page:** Created the main HTML, CSS, and JS files. Implemented the "About" page, including layout, styling, and responsive design.
-2.  **Mobile Navigation:** Implemented the hamburger menu and the JavaScript-powered toggle for the mobile navigation overlay.
-3.  **"Writing" Section:** Created the `writing.html` page with a styled grid of articles.
+1.  **Initial Scaffolding & About Page:** Created the main HTML, CSS, and JS files.
+2.  **Mobile Navigation:** Implemented the hamburger menu for smaller screens.
+3.  **"Writing" Section:** Created the `writing.html` page.
+4.  **Navigation Update:** Updated the main navigation to include "Experience" and "Resume".
+5.  **Theming & Animation:** Applied a green color scheme and refined the logo animation.
+6.  **Logo Hover Effect:** Simplified the logo animation to a simple color change on hover.
+7.  **Footer Gradient:** Implemented and refined a complex, multi-layered gradient for the footer.
 
-## Current Plan: Update Navigation
+## Current Plan: Modernize Footer Gradient (No Yellow)
 
-1.  **Modify Navigation Bar:** Remove the "Investing" and "Speaking" links from the header navigation.
-2.  **Add New Links:** Add new links for "Experience" and "Resume" to the header navigation in their place.
-3.  **Apply to All Pages:** Ensure the updated navigation is consistent across all existing HTML files (`index.html` and `writing.html`).
+1.  **Define `oklch` Color Palette:** Update the CSS variables in `style.css` to use an `oklch` color palette of lime green and sea green.
+2.  **Refine Gradient Composition:** Adjust the `radial-gradient` properties to create a smoother, more atmospheric blend of colors, resulting in a sophisticated, modern aesthetic without any yellow.
