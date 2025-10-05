@@ -1,1 +1,216 @@
-/* Add styles here */
+:root {
+    --primary-text-color: #222;
+    --background-color: #fff;
+    --link-color: #007bff;
+    --logo-zach-color: #FF0084;
+    --logo-holman-color: #FF7F24;
+    --article-link-color: #FF7F24;
+    --gradient-start: #ff0084;
+    --gradient-end: #ffc400;
+    --sans-serif-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    font-family: var(--sans-serif-font);
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo-zach {
+    color: var(--logo-zach-color);
+}
+
+.logo-holman {
+    color: var(--logo-holman-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    transform: rotate(3deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.writing h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.writing-group {
+    margin-top: 3rem;
+}
+
+.writing-group h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.article-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: border-color 0.2s ease;
+}
+
+.article-card:hover {
+    border-color: #ddd;
+}
+
+.article-card time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.article-card h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: var(--article-link-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+footer {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: white;
+    padding: 4rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.footer-content a {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .main-nav a {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    footer {
+        padding: 3rem 2rem;
+    }
+}

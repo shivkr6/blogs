@@ -1,14 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zach Holman</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <div class="logo">
+            <a href="/"><span class="logo-zach">Zach</span> <span class="logo-holman">Holman!</span></a>
+        </div>
+        <button class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="#">Investing</a></li>
+                <li><a href="#">Speaking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="about-text">
+                <h1>About Zach</h1>
+                <p>I'm a developer, startup advisor, and angel investor living in San Francisco.</p>
+                <p>You can find me on <a href="#">on Twitter</a>, <a href="#">on GitHub</a>, <a href="#">on AngelList</a>, and <a href="#">on Instagram</a>.</p>
+                <p>I'm currently the founder of <a href="#">Signed</a> and <a href="#">Calendearing</a>, and invest at <a href="#">Tifo</a>.</p>
+                <p>I have advised many startups over the years, including <a href="#">GitLab</a> and <a href="#">StackShare</a>.</p>
+                <p>I joined <a href="#">GitHub</a> in 2010 as one of their first engineering hires, and helped build and grow their product and culture over five years, from nine employees all the way to 250.</p>
+                <p>Before that, I worked at <a href="#">Gild</a> for a few years after graduating from <a href="#">Carnegie Mellon University</a> in Pittsburgh.</p>
+                <p>Want to chat? Feel free to <a href="#">email</a> me.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://placehold.co/300x200" alt="A portrait of Zach Holman">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Zach Holman</h2>
+            <p>I'm on <a href="#">Threads</a>, <a href="#">Bluesky</a>, and unfortunately <a href="#">Twitter</a>.</p>
+            <p>You can also find me on <a href="#">GitHub</a>.</p>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
